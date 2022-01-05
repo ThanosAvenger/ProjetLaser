@@ -11,43 +11,22 @@ terrain::terrain():d_nomFichier{}, d_tireur{}, d_cible{}, d_score{0}, d_largeur{
 terrain::terrain(const std::string &nomFichier): d_nomFichier{nomFichier}, d_tireur{}, d_cible{}, d_score{0}, d_largeur{0}, d_longueur{0}
 {}
 
-
-
-void terrain::ajoutDeMonstre()
+void terrain::ajoutDeMonstre(int nbrMonstre)
 {
-    int x,y;
-        if (d_level>1)
-        {
-            switch (d_level) {
-        case 2 :
-            for(int i=0;i<2;i++)
+     for(int i=0;i<nbrMonstre;i++)
+     {
+        do{
+            x = rand() % (d_largeur-2) + 1; // dans l'intervalle [1,d_longueur]
+            y = rand() % (d_longueur-2) + 1; // dans l'intervalle [2,d_largeur]
+            if (d_terrain[x][y]!='#' && d_terrain[x][y]!='@' && d_terrain[x][y]=='1' && d_terrain[x][y]!='M')
             {
-                do{
-                    x = rand() % (d_largeur-2) + 1; // dans l'intervalle [1,d_longueur]
-                    y = rand() % (d_longueur-2) + 1; // dans l'intervalle [2,d_largeur]
-                    if (d_terrain[x][y]!='#' && d_terrain[x][y]!='@' && d_terrain[x][y]=='1' && d_terrain[x][y]!='M')
-                    {
-                        d_terrain[x][y]='M';
-                    }
-                }while(d_terrain[x][y]=='#' || d_terrain[x][y]=='@' || d_terrain[x][y]=='1' && d_terrain[x][y]=='M');
+                d_terrain[x][y]='M';
             }
+        }while(d_terrain[x][y]=='#' || d_terrain[x][y]=='@' || d_terrain[x][y]=='1' && d_terrain[x][y]=='M');
+      }
 
-        case 3 :
-            for(int i=0;i<3;i++)
-            {
-                do{
-                    x = rand() % (d_largeur-2) + 1; // dans l'intervalle [1,d_longueur]
-                    y = rand() % (d_longueur-2) + 1; // dans l'intervalle [2,d_largeur]
-                    if (d_terrain[x][y]!='#' && d_terrain[x][y]!='@' && d_terrain[x][y]=='1' && d_terrain[x][y]!='M')
-                    {
-                        d_terrain[x][y]='M';
-                    }
-                }while(d_terrain[x][y]=='#' || d_terrain[x][y]=='@' || d_terrain[x][y]=='1' && d_terrain[x][y]=='M');
-            }
-        }
-
-        }
 }
+
 
 
 void terrain::chargeTerrain()
@@ -77,7 +56,18 @@ void terrain::chargeTerrain()
             compteur++;
         }
 
-        ajoutDeMonstre();
+        int x,y;
+        if (d_level>1)
+        {
+            switch (d_level) {
+            case 2 :
+                ajoutDeMonstre(2);
+                break;
+
+            case 3 :
+                ajoutDeMonstre(3);
+                break;
+        }
 
      }
 

@@ -21,10 +21,11 @@ public :
     point tireur() const;
     point cible() const;
     int score() const;
+    void ajoutDeMonstre(int nbrMonstre);
     void chargerTerrain();
     void afficheTerrain()const;
     const point& position()const;
-    
+
 
     void chargerTerrain();
     std::vector<std::vector<char> > d_terrain;// pour la partie texte.
