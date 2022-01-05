@@ -12,8 +12,10 @@
 
 
 class terrain{
-    friend class deplacement;
+    friend class directionLaserPourLeMiroirAntiSlash;
+    friend class directionLaserPourLeMiroirSlash;
     friend class miroir;
+    friend class deplaceLaser;
 public :
     terrain();
     terrain(const std::string &nomFichier);
@@ -29,10 +31,11 @@ public :
     const point& position()const;
 
 private :
-    std::vector<std::vector<char> > d_terrain;// pour la partie texte.
+    std::vector<std::vector<char> > d_terrain;
     std::string d_nomFichier;
     int d_largeur;
     int d_longueur;
+    point d_positionInitTireur;
     point d_tireur;
     point d_cible;
     int d_score;

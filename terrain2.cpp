@@ -51,7 +51,7 @@ void terrain::chargeTerrain()
             for(int j=0;j<d_largeur;j++)
             {
                 d_terrain[compteur][j]=(ligne[j]);
-                if(ligne[j] == '#') {d_tireur = {compteur,j};}
+                if(ligne[j] == '#') {d_positionInitTireur = {compteur,j}; d_tireur = {compteur,j}}
                 if(ligne[j] == '@') {d_cible = {compteur,j};}
             }
             compteur++;

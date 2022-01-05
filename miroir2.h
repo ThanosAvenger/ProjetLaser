@@ -9,9 +9,6 @@ public:
     point positionMiroir(int numMiroir, terrain& t);
     void poseMiroir(terrain &t);
 
-//void Miroir1(terrain &t); // Miroir : /
-//void Miroir2(terrain &t); // Miroir : \
-
 };
 
 
