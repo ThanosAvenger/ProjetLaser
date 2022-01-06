@@ -6,6 +6,7 @@ class point {
     friend class directionLaserPourLeMiroirAntiSlash;
     friend class directionLaserPourLeMiroirSlash;
     friend class terrain;
+    friend class deplaceLaser;
 public:
 
   point();

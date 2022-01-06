@@ -12,27 +12,30 @@ void deplaceLaser::deplacerLaserEnDirection(terrain& t)
     if(t.d_terrain[t.d_tireur.d_x][t.d_tireur.d_y]=='/')
     {
         directionLaserPourLeMiroirSlash l;
-        if(t.d_terrain[t.d_depart.d_x][t.d_depart.d_y+1]=='-'){
-                l.deplacementHaut(t);
-                else if(t.d_terrain[t.d_depart.d_x-1][t.d_depart.d_y]=='|')
-                    l.deplacementAGauche(t);
-                    else if(t.d_terrain[t.d_depart.d_x][t.d_depart.d_y+1]=='-')
-                            l.deplacementBas(t);
-                        else if(t.d_terrain[t.d_depart.d_x+1][t.d_depart.d_y]=='|')
-                                l.deplacementADroite(t);
-         }
+        if(t.d_terrain[t.d_tireur.d_x][t.d_tireur.d_y+1]=='-'){
+                l.deplacementHaut(t);}
+                else if(t.d_terrain[t.d_tireur.d_x-1][t.d_tireur.d_y]=='|')
+                     {l.deplacementAGauche(t);}
+                     else if(t.d_terrain[t.d_tireur.d_x][t.d_tireur.d_y+1]=='-')
+                            {l.deplacementBas(t);}
+                        else if(t.d_terrain[t.d_tireur.d_x+1][t.d_tireur.d_y]=='|')
+                                {l.deplacementADroite(t);}
+
     }
 
     if(t.d_terrain[t.d_tireur.d_x][t.d_tireur.d_y]=='\\')
     {
-               if(t.d_terrain[t.d_depart.d_x][t.d_depart.d_y+1]=='-'){
-                l.deplacementHaut(t);
-                else if(t.d_terrain[t.d_depart.d_x-1][t.d_depart.d_y]=='|')
-                    l.deplacementAGauche(t);
-                    else if(t.d_terrain[t.d_depart.d_x][t.d_depart.d_y+1]=='-')
-                            l.deplacementBas(t);
-                        else if(t.d_terrain[t.d_depart.d_x+1][t.d_depart.d_y]=='|')
-                                l.deplacementADroite(t);
+        directionLaserPourLeMiroirAntiSlash l;
+               if(t.d_terrain[t.d_tireur.d_x][t.d_tireur.d_y+1]=='-'){
+                l.deplacementHaut(t);}
+                else if(t.d_terrain[t.d_tireur.d_x-1][t.d_tireur.d_y]=='|')
+                    {l.deplacementAGauche(t);}
+                    else if(t.d_terrain[t.d_tireur.d_x][t.d_tireur.d_y+1]=='-')
+                            {l.deplacementBas(t);}
+                        else if(t.d_terrain[t.d_tireur.d_x+1][t.d_tireur.d_y]=='|')
+                                {l.deplacementADroite(t);}
+
+
     }
 
     }

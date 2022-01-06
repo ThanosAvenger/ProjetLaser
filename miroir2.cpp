@@ -46,9 +46,8 @@ point miroir::positionMiroir(int numMiroir, terrain& t)
     int x,y;
         do
         {
-            cout<<"choisissez la position x du miroir : "<<numMiroir+1<<endl;
+            cout<<"veuillez saisir les coordonnees x et y du miroir a poser"<<endl;
             cin>>x;
-            cout<<"choisissez la position y du miroir : "<<numMiroir+1<<endl;
             cin>>y;
         }while(   x<1 || x>t.largeur()-2 ||  y<1 || y>t.longueur()-2  || t.d_terrain[x][y]=='#' || t.d_terrain[x][y]=='@' || t.d_terrain[x][y]=='1' && t.d_terrain[x][y]=='M' );
         return point{x,y};
@@ -71,7 +70,7 @@ void miroir::poseMiroir(terrain &t)
             cin>>miroir;
         }while(miroir != '/' && miroir != '\\');
 
-        t.d_terrain[p.x()][p.y()]=miroir;
+        t.d_terrain[p.y()][p.x()]=miroir;
         t.afficheTerrain();
     }
 }

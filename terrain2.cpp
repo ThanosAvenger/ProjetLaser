@@ -1,6 +1,7 @@
 #include"terrain2.h"
 #include<fstream>
 #include <stdlib.h>
+#include <cmath>
 
 using namespace std;
 
@@ -17,8 +18,8 @@ void terrain::ajoutDeMonstre(int nbrMonstre)
      for(int i=0;i<nbrMonstre;i++)
      {
         do{
-            x = rand() % (d_largeur-2) + 1; // dans l'intervalle [1,d_longueur]
-            y = rand() % (d_longueur-2) + 1; // dans l'intervalle [2,d_largeur]
+            x = rand() % (d_largeur-2) +1;
+            y = rand() % (d_longueur-2) +2 ;
             if (d_terrain[x][y]!='#' && d_terrain[x][y]!='@' && d_terrain[x][y]=='1' && d_terrain[x][y]!='M')
             {
                 d_terrain[x][y]='M';
@@ -51,7 +52,7 @@ void terrain::chargeTerrain()
             for(int j=0;j<d_largeur;j++)
             {
                 d_terrain[compteur][j]=(ligne[j]);
-                if(ligne[j] == '#') {d_positionInitTireur = {compteur,j}; d_tireur = {compteur,j}}
+                if(ligne[j] == '#') {d_positionInitTireur = {compteur,j}; d_tireur = {compteur,j};}
                 if(ligne[j] == '@') {d_cible = {compteur,j};}
             }
             compteur++;

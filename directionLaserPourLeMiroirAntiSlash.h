@@ -1,6 +1,7 @@
 #ifndef DIRECTIONLASERPOURLEMIROIRANTISLASH_H
 #define DIRECTIONLASERPOURLEMIROIRANTISLASH_H
 #include "terrain2.h"
+#include "directionLaser.h"
 
 class directionLaserPourLeMiroirAntiSlash : public directionLaser{
 

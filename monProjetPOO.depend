@@ -1,0 +1,95 @@
+# depslib dependency file v1.0
+1641456844 source:c:\users\arkad\desktop\l3 miage\qualité de programmation\monprojetpoo\main.cpp
+	<iostream>
+	"terrain2.h"
+	"miroir2.h"
+	"deplaceLaser.h"
+	"point.h"
+
+1641407226 source:c:\users\arkad\desktop\l3 miage\qualité de programmation\monprojetpoo\point.cpp
+	<iostream>
+	"point.h"
+
+1641456650 c:\users\arkad\desktop\l3 miage\qualité de programmation\monprojetpoo\point.h
+
+1641395686 source:c:\users\arkad\desktop\l3 miage\qualité de programmation\monprojetpoo\miroir.cpp
+	<iostream>
+	"deplacement.h"
+	"miroir.h"
+
+1641395594 c:\users\arkad\desktop\l3 miage\qualité de programmation\monprojetpoo\terrain.h
+	<iostream>
+	<fstream>
+	<vector>
+	<string.h>
+	"point.h"
+
+1641396122 c:\users\arkad\desktop\l3 miage\qualité de programmation\monprojetpoo\deplacement.h
+	"terrain2.h"
+
+1641395579 c:\users\arkad\desktop\l3 miage\qualité de programmation\monprojetpoo\miroir.h
+	"terrain.h"
+	"point.h"
+
+1641396127 source:c:\users\arkad\desktop\l3 miage\qualité de programmation\monprojetpoo\deplacement.cpp
+	"terrain2.h"
+	"deplacement.h"
+	<iostream>
+
+1641395768 source:c:\users\arkad\desktop\l3 miage\qualité de programmation\monprojetpoo\terrain.cpp
+	"terrain.h"
+	<fstream>
+	<stdlib.h>
+
+1641425918 c:\users\arkad\desktop\l3 miage\qualité de programmation\monprojetpoo\terrain2.h
+	<iostream>
+	<fstream>
+	<vector>
+	<string.h>
+	"point.h"
+
+1641456595 source:c:\users\arkad\desktop\l3 miage\qualité de programmation\monprojetpoo\terrain2.cpp
+	"terrain2.h"
+	<fstream>
+	<stdlib.h>
+
+1641457684 source:c:\users\arkad\desktop\l3 miage\qualité de programmation\monprojetpoo\miroir2.cpp
+	<iostream>
+	"miroir2.h"
+
+1641397542 c:\users\arkad\desktop\l3 miage\qualité de programmation\monprojetpoo\miroir2.h
+	"terrain2.h"
+	"point.h"
+
+1641407243 source:c:\users\arkad\desktop\l3 miage\qualité de programmation\monprojetpoo\deplacement0.cpp
+	"deplacement0.h"
+	<iostream>
+
+1641416867 c:\users\arkad\desktop\l3 miage\qualité de programmation\monprojetpoo\deplacement0.h
+	"terrain2.h"
+
+1641426893 c:\users\arkad\desktop\l3 miage\qualité de programmation\monprojetpoo\deplacelaser.h
+	"terrain2.h"
+
+1641457869 source:c:\users\arkad\desktop\l3 miage\qualité de programmation\monprojetpoo\directionlaserpourlemiroirslash.cpp
+	"directionLaserPourLeMiroirSlash.h"
+
+1641456245 c:\users\arkad\desktop\l3 miage\qualité de programmation\monprojetpoo\directionlaserpourlemiroirslash.h
+	"terrain2.h"
+	"directionLaser.h"
+
+1641417546 c:\users\arkad\desktop\l3 miage\qualité de programmation\monprojetpoo\directionlaser.h
+	"terrain2.h"
+
+1641457815 source:c:\users\arkad\desktop\l3 miage\qualité de programmation\monprojetpoo\directionlaserpourlemiroirantislash.cpp
+	"directionLaserPourLeMiroirAntiSlash.h"
+
+1641456265 c:\users\arkad\desktop\l3 miage\qualité de programmation\monprojetpoo\directionlaserpourlemiroirantislash.h
+	"terrain2.h"
+	"directionLaser.h"
+
+1641456736 source:c:\users\arkad\desktop\l3 miage\qualité de programmation\monprojetpoo\deplacelaser.cpp
+	"deplaceLaser.h"
+	"directionLaserPourLeMiroirSlash.h"
+	"directionLaserPourLeMiroirAntiSlash.h"
+
